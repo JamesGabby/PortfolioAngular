@@ -1,1 +1,1 @@
-# Portfolio made with AngularJS
+# My portfolio made with AngularJS
