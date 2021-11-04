@@ -6,7 +6,7 @@
 @include mat.core();
 
 $angular-primary: mat.define-palette(mat.$teal-palette, 500, 100, 900);
-$angular-accent: mat.define-palette(mat.$pink-palette, A200, A100, A400);
+$angular-accent: mat.define-palette(mat.$blue-palette, A200, A100, A400);
 
 $angular-warn: mat.define-palette(mat.$red-palette);
 
@@ -45,7 +45,6 @@ $angular-dark-theme: mat.define-dark-theme(
 }
 
 .toolbar {
-    background-color: antiquewhite;
     font-family: Aclonica;
     top: 0;
     right: 0;
@@ -55,13 +54,19 @@ $angular-dark-theme: mat.define-dark-theme(
     height: 1000px;
     width: 97.9%;
     margin-top: 0;
-    background-color: bisque;
 }
 
 .middle-card {
     margin: auto;
-    height: 300px;
-    width: 70%;
+    height: 100px;
+    width: 60%;
+}
+
+.router-card {
+    margin: auto;
+    margin-top: 10px;
+    height: 450px;
+    width: 60%; 
 }
 
 .name-spacer {
@@ -96,4 +101,65 @@ $angular-dark-theme: mat.define-dark-theme(
     opacity: 0.8;
     margin-left: 10px;;
 }
+
+// main buttons
+
+svg.material-icons {
+  height: 24px;
+  width: auto;
+}
+
+svg.material-icons:not(:last-child) {
+  margin-right: 8px;
+}
+
+.card svg.material-icons path {
+  fill: #888;
+}
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 0;
+}
+
+.card {
+  all: unset;
+  border-radius: 4px;
+  border: 1px solid rgb(145, 167, 238);
+  height: 40px;
+  width: 200px;
+  margin: 10px 8px 16px;
+  padding: 16px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.2s ease-in-out;
+  line-height: 24px;
+}
+
+.card-container .card:not(:last-child) {
+  margin-right: 0;
+}
+
+.card-container .card:not(.highlight-card) {
+  cursor: pointer;
+}
+
+.card-container .card:not(.highlight-card):hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 17px rgba(0, 0, 0, 0.35);
+}
+
+.card-container .card:not(.highlight-card):hover .material-icons path {
+  fill: rgb(105, 103, 103);
+}
+
+a:hover {
+  color: rgb(145, 167, 238);
+  text-decoration: none;
+}
+
 

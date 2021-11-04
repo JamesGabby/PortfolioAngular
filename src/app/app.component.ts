@@ -10,15 +10,27 @@ import { FormControl } from '@angular/forms';
 export class AppComponent implements OnInit {
   
   title = 'MyPortfolio';
-  svgColor = 'white';
+  svgColor = 'black';
   toggleControl = new FormControl(false);
+  toolbarColor = '';
+  lineColor = 'black';
 
   @HostBinding('class') className = '';
 
   ngOnInit(): void {
     this.toggleControl.valueChanges.subscribe((darkMode) => {
       const darkClassName = 'darkMode';
-      this.className = darkMode ? darkClassName : '';
+
+      if (this.className = darkMode) {
+        this.className = darkClassName;
+        this.svgColor = 'white';
+        this.lineColor = 'white';
+      } else {
+        this.className = '';
+        this.svgColor = 'black'
+        this.lineColor = 'black';
+      }
+      
     });
   }
 
