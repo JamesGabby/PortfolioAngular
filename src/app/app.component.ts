@@ -12,8 +12,10 @@ export class AppComponent implements OnInit {
   title = 'MyPortfolio';
   svgColor = 'black';
   toggleControl = new FormControl(false);
-  toolbarColor = '';
   lineColor = 'black';
+  toolbarShadow = '';
+  buttonBorders = '1px solid #DCDCDC';
+  fill = 'yellow'
 
   @HostBinding('class') className = '';
 
@@ -25,10 +27,17 @@ export class AppComponent implements OnInit {
         this.className = darkClassName;
         this.svgColor = 'white';
         this.lineColor = 'white';
+        this.toolbarShadow = '0 4px 8px 0 #4666FF';
+        this.buttonBorders = '1px solid #A1B1FF';
+        
+
       } else {
         this.className = '';
         this.svgColor = 'black'
         this.lineColor = 'black';
+        this.toolbarShadow = '';
+        this.buttonBorders = '1px solid #DCDCDC';
+
       }
       
     });
