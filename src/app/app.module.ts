@@ -4,7 +4,8 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { MatCardModule } from '@angular/material/card';
-
+import { MatExpansionModule } from '@angular/material/expansion';
+import { MatListModule } from '@angular/material/list';
 
 import { ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
@@ -33,7 +34,10 @@ import { EducationComponent } from 'src/education/education.component';
     MatIconModule,
     MatSlideToggleModule,
     ReactiveFormsModule,
-    MatCardModule
+    MatCardModule,
+    MatExpansionModule,
+    MatListModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]

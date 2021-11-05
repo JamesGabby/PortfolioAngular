@@ -1,6 +1,4 @@
 import { Component } from "@angular/core";
-import { MatCardModule } from '@angular/material/card';
-
 
 @Component({
   selector: 'app-education',
@@ -12,4 +10,5 @@ export class EducationComponent {
   the student with up-to-date skills and knowledge in industry relevant 
   object oriented programming and full-stack development.`;
   shortText = `Projects on this course included: `;
+   
 }

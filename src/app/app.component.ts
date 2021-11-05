@@ -14,11 +14,14 @@ export class AppComponent implements OnInit {
   toggleControl = new FormControl(false);
   lineColor = 'black';
   toolbarShadow = '';
+  routerShadow = '0 4px 19px 0 rgba(114, 108, 117, 0.562)'
   buttonBorders = '1px solid #DCDCDC';
+  routerBorder = '1px solid #DCDCDC';
   fill = 'yellow';
   longText = `The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog
   from Japan. A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was
   originally bred for hunting.`;
+  imgSrc = 'https://www.mmu.ac.uk/brand/logo/3.0-Coat-of-Arms_1.jpg';
 
   @HostBinding('class') className = '';
 
@@ -32,6 +35,8 @@ export class AppComponent implements OnInit {
         this.lineColor = 'white';
         this.toolbarShadow = '0 4px 8px 0 #4666FF';
         this.buttonBorders = '1px solid #A1B1FF';
+        this.routerBorder = '1px solid 	#1E90FF';
+
         
 
       } else {
@@ -40,6 +45,7 @@ export class AppComponent implements OnInit {
         this.lineColor = 'black';
         this.toolbarShadow = '';
         this.buttonBorders = '1px solid #DCDCDC';
+        this.routerBorder = '1px solid #DCDCDC';
 
       }
       
