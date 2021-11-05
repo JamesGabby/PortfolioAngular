@@ -10,5 +10,7 @@ export class EducationComponent {
   the student with up-to-date knowledge and skills in industry relevant 
   object oriented programming and full-stack development.`;
   shortText = `Projects on this course included: `;
+  longText2 = `dsdnsdsd`;
+  shortText2 = `Units on this course included: `;
    
 }

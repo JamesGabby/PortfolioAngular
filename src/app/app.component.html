@@ -1,13 +1,19 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <mat-toolbar class="toolbar" [style.box-shadow]="toolbarShadow">
-  Portfolio
-  <span class="name-spacer">James Gabbitus</span>
-  <span class="mode-spacer"></span>
+  <a href="/" class="home" [style.color]="svgColor"><mat-icon aria-hidden="false" aria-label="home icon">home</mat-icon></a>
+    Portfolio
+  <div class="line" [style.background-color]="lineColor"></div>
+
+  <div class="mode-spacer"></div>
   <mat-icon class="mr-8">brightness_5</mat-icon>
   <mat-slide-toggle [formControl]="toggleControl" class="mr-8"></mat-slide-toggle>
-  <mat-icon>bedtime</mat-icon>
+  <mat-icon class="mr-8">bedtime</mat-icon>
+  <span class="name-spacer">James Gabbitus</span>
+  
+  <span class="mode-spacer"></span>
+  
 
-  <div class="line" [style.background-color]="lineColor"></div>
   <div class="flex-stretch"></div>
   <a aria-label="James Gabbitus Linkedin" target="_blank" rel="noopener" href="https://www.linkedin.com/in/james-gabbitus/" title="Linkedin">
     <svg [style.fill]="svgColor" id="twitter-logo" width="24" height="24" data-name="Logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
@@ -51,7 +57,10 @@
   <mat-card class="router-card" [style.border]="routerBorder" [style.box-shadow]="routerShadow" [attr.src]="imgSrc">
     <router-outlet></router-outlet>
   </mat-card>
+              
 </mat-card>
+
+              
 
 
 
