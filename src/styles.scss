@@ -51,21 +51,27 @@ $angular-dark-theme: mat.define-dark-theme(
     box-shadow: 0 4px 8px 0 rgba(114, 108, 117, 0.637);
     border-radius: 4px;
     font-weight: 550;
+    overflow: auto;
+    display: block;
+    margin: auto;
 }
 
 .main-card {
     height: 1000px;
     width: 97.9%;
     margin-top: 1px;
+    overflow: auto;
+    margin: auto;
 }
-
-
 
 .router-card {
     margin: auto;
     margin-top: 15px;
     height: 700px;
     width: 60%; 
+    overflow: auto;
+    display: block;
+    text-align: center;
 }
 
 .name-spacer {
@@ -92,7 +98,7 @@ $angular-dark-theme: mat.define-dark-theme(
 }
 
 .line {
-    border-right: 2px solid white;
+    border-right: 2px solid black;
     height: 36px;
     border-radius: 100%;
     opacity: 0.8;

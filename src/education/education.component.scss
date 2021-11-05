@@ -1,17 +1,21 @@
 .card1 {
-  margin-left: 120px;
+  margin: auto;
   max-width: 600px;
   margin-bottom: 8px;
   text-align: center;
   margin-top: 20px;
+  overflow: auto;
+  display: block;
 }
 
 .card2 {
-  margin-left: 120px;
+  margin: auto;
   margin-top: 20px;
   max-width: 600px;
   margin-bottom: 8px;
   text-align: center;
+  overflow: auto;
+
 }
 
 .eduImg {

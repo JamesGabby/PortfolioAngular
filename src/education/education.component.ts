@@ -7,7 +7,7 @@ import { Component } from "@angular/core";
 })
 export class EducationComponent {
   longText = `An intensive MSc conversion course designed to equip 
-  the student with up-to-date skills and knowledge in industry relevant 
+  the student with up-to-date knowledge and skills in industry relevant 
   object oriented programming and full-stack development.`;
   shortText = `Projects on this course included: `;
    

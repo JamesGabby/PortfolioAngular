@@ -14,7 +14,7 @@ export class AppComponent implements OnInit {
   toggleControl = new FormControl(false);
   lineColor = 'black';
   toolbarShadow = '';
-  routerShadow = '0 4px 19px 0 rgba(114, 108, 117, 0.562)'
+  routerShadow = '';
   buttonBorders = '1px solid #DCDCDC';
   routerBorder = '1px solid #DCDCDC';
   fill = 'yellow';
@@ -36,7 +36,7 @@ export class AppComponent implements OnInit {
         this.toolbarShadow = '0 4px 8px 0 #4666FF';
         this.buttonBorders = '1px solid #A1B1FF';
         this.routerBorder = '1px solid 	#1E90FF';
-
+        this.routerShadow = '0 4px 19px 0 rgba(114, 108, 117, 0.562)';
         
 
       } else {
@@ -45,7 +45,8 @@ export class AppComponent implements OnInit {
         this.lineColor = 'black';
         this.toolbarShadow = '';
         this.buttonBorders = '1px solid #DCDCDC';
-        this.routerBorder = '1px solid #DCDCDC';
+        this.routerBorder = '';
+        this.routerShadow = '';
 
       }
       
