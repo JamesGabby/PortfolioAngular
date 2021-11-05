@@ -50,6 +50,7 @@ $angular-dark-theme: mat.define-dark-theme(
     right: 0;
     box-shadow: 0 4px 8px 0 rgba(114, 108, 117, 0.637);
     border-radius: 4px;
+    font-weight: 550;
 }
 
 .main-card {
@@ -162,5 +163,8 @@ a:hover {
   color: rgb(145, 167, 238);
   text-decoration: none;
 }
+
+// education
+
 
 

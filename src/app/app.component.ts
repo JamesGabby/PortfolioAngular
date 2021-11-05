@@ -15,7 +15,10 @@ export class AppComponent implements OnInit {
   lineColor = 'black';
   toolbarShadow = '';
   buttonBorders = '1px solid #DCDCDC';
-  fill = 'yellow'
+  fill = 'yellow';
+  longText = `The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog
+  from Japan. A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was
+  originally bred for hunting.`;
 
   @HostBinding('class') className = '';
 

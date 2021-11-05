@@ -17,7 +17,8 @@ import { EducationComponent } from 'src/education/education.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    EducationComponent
   ],
   imports: [
     BrowserModule,
