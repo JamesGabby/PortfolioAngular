@@ -1,7 +1,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
 <mat-toolbar class="toolbar" [style.box-shadow]="toolbarShadow">
-  <a href="/" class="home" [style.color]="svgColor"><mat-icon aria-hidden="false" aria-label="home icon">home</mat-icon></a>
+  <a href="/" id="home" [style.color]="svgColor"><mat-icon aria-hidden="false" aria-label="home icon">home</mat-icon></a>
     Portfolio
   <div class="line" [style.background-color]="lineColor"></div>
 
@@ -9,12 +10,37 @@
   <mat-icon class="mr-8">brightness_5</mat-icon>
   <mat-slide-toggle [formControl]="toggleControl" class="mr-8"></mat-slide-toggle>
   <mat-icon class="mr-8">bedtime</mat-icon>
-  <span class="name-spacer">James Gabbitus</span>
-  
+  <div id="hover">James Gabbitus</div>
+  <div id="stuff">
+    <div class="container-">
+      <div class="coast">
+        <div class="wave-rel-wrap">
+          <div class="wave"></div>
+        </div>
+      </div>
+      <div class="coast delay">
+        <div class="wave-rel-wrap">
+          <div class="wave delay"></div>
+        </div>
+      </div>
+      <div class="text text-j" [style.color]="animatedText">J</div>
+      <div class="text text-a" [style.color]="animatedText">a</div>
+      <div class="text text-m" [style.color]="animatedText">m</div>
+      <div class="text text-e" [style.color]="animatedText">e</div>
+      <div class="text text-s" [style.color]="animatedText">s</div>
+      <div class="text text-g" [style.color]="animatedText">G</div>
+      <div class="text text-a2" [style.color]="animatedText">a</div>
+      <div class="text text-b" [style.color]="animatedText">b</div>
+      <div class="text text-b2" [style.color]="animatedText">b</div>
+      <div class="text text-i" [style.color]="animatedText">i</div>
+      <div class="text text-t" [style.color]="animatedText">t</div>
+      <div class="text text-u" [style.color]="animatedText">u</div>
+      <div class="text text-s2" [style.color]="animatedText">s</div>
+    </div>  
+</div>
   <span class="mode-spacer"></span>
-  
-
   <div class="flex-stretch"></div>
+
   <a aria-label="James Gabbitus Linkedin" target="_blank" rel="noopener" href="https://www.linkedin.com/in/james-gabbitus/" title="Linkedin">
     <svg [style.fill]="svgColor" id="twitter-logo" width="24" height="24" data-name="Logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
       <rect width="400" height="400" fill="none"/>
@@ -39,7 +65,7 @@
       <span>About</span>
       <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/></svg>
     </a>
-    <a class="card" routerLink="/education" [style.border]="buttonBorders">
+    <a class="card" routerLink="/education" [style.border]="buttonBorders" [formControl]="route">
       <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="459.319px" height="459.319px" viewBox="0 0 459.319 459.319"><path d="M94.924,366.674h312.874c0.958,0,1.886-0.136,2.778-0.349c0.071,0,0.13,0.012,0.201,0.012  c6.679,0,12.105-5.42,12.105-12.104V12.105C422.883,5.423,417.456,0,410.777,0h-2.955H114.284H94.941  c-32.22,0-58.428,26.214-58.428,58.425c0,0.432,0.085,0.842,0.127,1.259c-0.042,29.755-0.411,303.166-0.042,339.109  c-0.023,0.703-0.109,1.389-0.109,2.099c0,30.973,24.252,56.329,54.757,58.245c0.612,0.094,1.212,0.183,1.847,0.183h317.683  c6.679,0,12.105-5.42,12.105-12.105v-45.565c0-6.68-5.427-12.105-12.105-12.105s-12.105,5.426-12.105,12.105v33.461H94.924  c-18.395,0-33.411-14.605-34.149-32.817c0.018-0.325,0.077-0.632,0.071-0.963c-0.012-0.532-0.03-1.359-0.042-2.459  C61.862,380.948,76.739,366.674,94.924,366.674z M103.178,58.425c0-6.682,5.423-12.105,12.105-12.105s12.105,5.423,12.105,12.105  V304.31c0,6.679-5.423,12.105-12.105,12.105s-12.105-5.427-12.105-12.105V58.425z"/></svg>
       <span>Education</span>
       <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/></svg>
@@ -54,13 +80,15 @@
     </a>
   </div>
   
-  <mat-card class="router-card" [style.border]="routerBorder" [style.box-shadow]="routerShadow" [attr.src]="imgSrc">
+  <mat-card class="router-card" [style.border]="routerBorder" [style.box-shadow]="routerShadow">
+    <div [style.display]="hide">hello</div>
     <router-outlet></router-outlet>
   </mat-card>
-              
+
+  
+
 </mat-card>
 
-              
 
 
 
