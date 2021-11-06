@@ -86,10 +86,6 @@ $angular-dark-theme: mat.define-dark-theme(
     text-align: center;
 }
 
-.name-spacer {
-    margin-left: 27%;
-}
-
 .mode-spacer {
     margin-left: 12px;
 }
@@ -194,9 +190,9 @@ $waveDur: 3500ms;
 
 .container- {
   position: absolute;
+  height: 1.3rem;
   width: 17rem;
-  height: 10rem;
-  left: 72.5%;
+  left: 48%;
   transform: translate(-50%, -50%);
   opacity: 1;
 }
@@ -211,7 +207,7 @@ a:hover + .container- {
   font-weight: 900;
   display: inline-block;
   position: absolute;
-  bottom: 8px;
+  bottom: -60px;
   animation: text $textDur ease-in infinite;
   transform: translatez(0);
   &-j {
@@ -272,9 +268,9 @@ a:hover + .container- {
 .coast { // wave: translate-x
   position: absolute;
   left: -0.85rem;
-  bottom: 2rem;
+  bottom: 0.2rem;
   width: 7.7rem;
-  height: 2.4rem;
+  height: -3.4rem;
   display: inline-block;
   animation: coast $waveDur linear infinite;
   transform: translateZ(0);
@@ -378,6 +374,8 @@ a:hover + .container- {
   }
 }
 
+//--
+
 #stuff {
   opacity: 0.0;
   -webkit-transition: all 500ms ease-in-out;
@@ -386,13 +384,29 @@ a:hover + .container- {
   -o-transition: all 500ms ease-in-out;
   transition: all 500ms ease-in-out;
 }
+
 #hover {
-  float: left;
-  margin-left: 400px;
-  position: relative;
+  position: static;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-left: 25%;
+  -webkit-transition: all 500ms ease-in-out;
+  -moz-transition: all 500ms ease-in-out;
+  -ms-transition: all 500ms ease-in-out;
+  -o-transition: all 500ms ease-in-out;
+  transition: all 500ms ease-in-out;
 }
-#hover:hover + #stuff {
-  opacity: 1.0;
+
+//--
+
+#magic-button {
+  cursor: pointer;
+  margin: 7px 0 0 0;
+}
+
+.icon-display {
+  transform: scale(0.7);
 }
 
 //--

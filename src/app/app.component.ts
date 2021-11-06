@@ -24,6 +24,21 @@ export class AppComponent implements OnInit {
   originally bred for hunting.`;
   hide = 'none';
   route = new FormControl(false);
+  magic = "0";
+  isMagic = false;
+  nameVisibility = '';
+
+  click() {
+    this.isMagic = !this.isMagic;
+
+    if (this.isMagic) {
+      this.magic = "1";
+      this.nameVisibility = '0';
+    } else {
+      this.magic = "0";
+      this.nameVisibility = '1';
+    }
+  }
 
   @HostBinding('class') className = '';
 
