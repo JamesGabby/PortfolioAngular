@@ -46,17 +46,18 @@ $angular-dark-theme: mat.define-dark-theme(
 }
 
 .toolbar {
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     top: -7px;
     right: 10px;
     left: 0;
-    box-shadow: 0 4px 8px 0 rgba(114, 108, 117, 0.637);
+    box-shadow: 0 4px 8px 0 rgba(114, 108, 117, 0.562);
     border-radius: 4px;
     font-weight: 550;
     margin: auto;
     overflow: visible;
     position: relative;
     height: 70px;
+    background-color: red;
 }
 
 @media screen and (max-width: 500px) {
@@ -69,17 +70,16 @@ $angular-dark-theme: mat.define-dark-theme(
 }
 
 .main-card {
-    height: 2000px;
+    height: 1700px;
     width: 97.9%;
-    margin-top: 0;
+    margin-top: -7px;
     overflow: auto;
-    margin: auto;
 }
 
 .router-card {
     margin: auto;
     margin-top: 20px;
-    height: 1800px;
+    height: 1400px;
     width: 80%; 
     overflow: auto;
     display: block;
@@ -120,7 +120,6 @@ $angular-dark-theme: mat.define-dark-theme(
 }
 
 // main buttons
-
 svg.material-icons {
   height: 24px;
   width: auto;
@@ -181,9 +180,6 @@ a:hover {
 }
 
 //--name animation
-
-
-@import url('https://fonts.googleapis.com/css?family=Muli');
 $textDur: 1750ms;
 $waveDur: 3500ms;
 
@@ -204,7 +200,7 @@ a:hover + .container- {
 .text {
   font-family: 'Muli', Helvetica, sans-serif;
   font-size: 2rem;
-  font-weight: 900;
+  font-weight: 500;
   display: inline-block;
   position: absolute;
   bottom: -60px;
@@ -236,7 +232,7 @@ a:hover + .container- {
     animation-delay: 470ms;
   }
   &-a2 {
-    left: 10.5rem;
+    left: 10.8rem;
     animation-delay: 550ms;
   }
   &-b {
@@ -388,14 +384,14 @@ a:hover + .container- {
 #hover {
   position: static;
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
-  margin-left: 25.4%;
+  margin-left: 23.7%;
   -webkit-transition: all 500ms ease-in-out;
   -moz-transition: all 500ms ease-in-out;
   -ms-transition: all 500ms ease-in-out;
   -o-transition: all 500ms ease-in-out;
   transition: all 500ms ease-in-out;
+  font-size: 25px;
 }
 
 //--
@@ -412,11 +408,16 @@ a:hover + .container- {
 
 #magic-button-toggle {
   transform: scale(0.4);
+  border-radius: 40px;
+  opacity: 0.7;
 }
 
 #magic-div {
   margin: 0 0 2.5px 0;
 }
 
-
 //--
+#home-page {
+  position: absolute;
+  margin: 5% 0 0 25%;
+}

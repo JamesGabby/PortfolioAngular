@@ -22,7 +22,7 @@ export class AppComponent implements OnInit {
   longText = `The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog
   from Japan. A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was
   originally bred for hunting.`;
-  hide = 'none';
+  hide = 'visible';
   route = new FormControl(false);
   magic = "0";
   isMagic = false;
@@ -38,6 +38,10 @@ export class AppComponent implements OnInit {
       this.magic = "0";
       this.nameVisibility = '1';
     }
+  }
+
+  hideHome() {
+    this.hide = "none";
   }
 
   @HostBinding('class') className = '';

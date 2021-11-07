@@ -1,1 +1,69 @@
-<h1>about</h1>
+
+
+  
+<mat-card class="card1">
+  
+
+  <mat-accordion>
+    <mat-expansion-panel>
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          Overview
+        </mat-panel-title>
+      </mat-expansion-panel-header>
+      <mat-panel-description>
+        {{overview}}
+      </mat-panel-description>
+    </mat-expansion-panel>
+
+    <mat-expansion-panel>
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          Technical Skills
+        </mat-panel-title>
+
+      </mat-expansion-panel-header>
+      
+        <mat-list role="list" class="list" style="text-align: left;">
+            <mat-list-item role="listitem">
+                <mat-panel-description style="margin-top: -50px;">
+                    {{languages}}
+                </mat-panel-description>
+            </mat-list-item>
+            <mat-list-item role="listitem">
+                <mat-panel-description style="margin-top: -50px;">
+                    {{other}}
+                </mat-panel-description>
+            </mat-list-item>
+        </mat-list>
+    
+    </mat-expansion-panel>
+
+    <mat-expansion-panel>
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          Personal Projects
+        </mat-panel-title>
+        
+      </mat-expansion-panel-header>
+        <mat-list role="list" class="list" style="text-align: left;">
+          <mat-list-item role="listitem"><mat-icon aria-hidden="false" aria-label="Right arrow icon">insert_emoticon</mat-icon>
+            <span class="space-from-arrow"></span>Death, God and the Meaning of Life</mat-list-item>
+          <mat-list-item role="listitem"><mat-icon aria-hidden="false" aria-label="Right arrow icon">insert_emoticon</mat-icon>
+            <span class="space-from-arrow"></span>Existentialism</mat-list-item>
+          <mat-list-item role="listitem"><mat-icon aria-hidden="false" aria-label="Right arrow icon">insert_emoticon</mat-icon>
+            <span class="space-from-arrow"></span>Introduction to Classical Philosophy</mat-list-item>
+          <mat-list-item role="listitem"><mat-icon aria-hidden="false" aria-label="Right arrow icon">insert_emoticon</mat-icon>
+            <span class="space-from-arrow"></span>Introduction to Modern Philosophy</mat-list-item>
+          <mat-list-item role="listitem"><mat-icon aria-hidden="false" aria-label="Right arrow icon">insert_emoticon</mat-icon>
+            <span class="space-from-arrow"></span>Questioning Humanity I</mat-list-item>
+          <mat-list-item role="listitem"><mat-icon aria-hidden="false" aria-label="Right arrow icon">insert_emoticon</mat-icon>
+            <span class="space-from-arrow"></span>Questioning Humanity II</mat-list-item>
+          <mat-list-item role="listitem"><mat-icon aria-hidden="false" aria-label="Right arrow icon">insert_emoticon</mat-icon>
+            <span class="space-from-arrow"></span>Theoretical Ethics</mat-list-item>
+        </mat-list>
+    </mat-expansion-panel>
+  </mat-accordion>
+</mat-card>
+
+

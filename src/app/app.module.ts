@@ -7,7 +7,6 @@ import { MatCardModule } from '@angular/material/card';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { MatListModule } from '@angular/material/list';
 import { MatButtonToggleModule } from '@angular/material/button-toggle';
-
 import { ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -20,7 +19,9 @@ import { EducationComponent } from 'src/education/education.component';
 @NgModule({
   declarations: [
     AppComponent,
-    EducationComponent
+    EducationComponent,
+    AboutComponent,
+    ExperienceComponent
   ],
   imports: [
     BrowserModule,
