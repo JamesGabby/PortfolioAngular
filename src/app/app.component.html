@@ -10,7 +10,17 @@
   <mat-icon class="mr-8">brightness_5</mat-icon>
   <mat-slide-toggle [formControl]="toggleControl" class="mr-8"></mat-slide-toggle>
   <mat-icon class="mr-8">bedtime</mat-icon>
-  <a (click)="click()" id="magic-button"><mat-icon aria-hidden="false" aria-label="Right arrow icon" class="icon-display">star</mat-icon></a>
+  <div id="magic-div">
+    <a (click)="click()" id="magic-button">
+      <mat-button-toggle-group multiple id="magic-button-toggle">
+        <mat-button-toggle value="bold">
+          <mat-icon aria-hidden="false" aria-label="Right arrow icon" class="icon-display">
+            question_mark
+          </mat-icon>
+        </mat-button-toggle>
+      </mat-button-toggle-group>
+    </a>
+  </div>
   <div id="hover" [style.opacity]="nameVisibility">James Gabbitus</div>
   <div id="stuff" [style.opacity]="magic">
     <div class="container-">

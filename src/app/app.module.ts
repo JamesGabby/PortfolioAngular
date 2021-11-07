@@ -6,6 +6,7 @@ import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { MatCardModule } from '@angular/material/card';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { MatListModule } from '@angular/material/list';
+import { MatButtonToggleModule } from '@angular/material/button-toggle';
 
 import { ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
@@ -38,7 +39,8 @@ import { EducationComponent } from 'src/education/education.component';
     ReactiveFormsModule,
     MatCardModule,
     MatExpansionModule,
-    MatListModule
+    MatListModule,
+    MatButtonToggleModule
 
   ],
   providers: [],
