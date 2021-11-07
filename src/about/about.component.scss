@@ -17,8 +17,7 @@
   //--
   
   body {
-    flex-wrap: wrap;
-  
+    flex-wrap: wrap-reverse;
   }
 
   mat-expansion-panel {
@@ -27,13 +26,20 @@
 
   mat-panel-title {
     font-size: 18px;
+
   }
 
   mat-panel-description {
-    font-size: 17px;
+    font-size: 1rem;
+    position: absolute;
+  }
+
+  #exc {
+    position: relative;
   }
 
   #desc-dates {
     font-size: 14px;
+
   }
 

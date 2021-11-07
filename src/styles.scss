@@ -58,6 +58,8 @@ $angular-dark-theme: mat.define-dark-theme(
     position: relative;
     height: 70px;
     background-color: red;
+    flex-wrap: wrap-reverse;
+
 }
 
 @media screen and (max-width: 500px) {
