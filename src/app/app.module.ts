@@ -1,4 +1,4 @@
-import { NgModule, Input } from '@angular/core';
+import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
@@ -7,8 +7,13 @@ import { MatCardModule } from '@angular/material/card';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { MatListModule } from '@angular/material/list';
 import { MatButtonToggleModule } from '@angular/material/button-toggle';
+import { MatButtonModule } from '@angular/material/button';
+import { MatInputModule } from '@angular/material/input';
+import { HttpClientXsrfModule } from '@angular/common/http';
+import { HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
+
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RouterModule } from '@angular/router';
@@ -21,7 +26,7 @@ import { EducationComponent } from 'src/education/education.component';
     AppComponent,
     EducationComponent,
     AboutComponent,
-    ExperienceComponent
+    ExperienceComponent,
   ],
   imports: [
     BrowserModule,
@@ -30,7 +35,6 @@ import { EducationComponent } from 'src/education/education.component';
       {path: 'education', component: EducationComponent},
       {path: 'experience', component: ExperienceComponent},
       {path: 'home', component: AppComponent}
-
     ]),
     AppRoutingModule,
     BrowserAnimationsModule,
@@ -41,8 +45,11 @@ import { EducationComponent } from 'src/education/education.component';
     MatCardModule,
     MatExpansionModule,
     MatListModule,
-    MatButtonToggleModule
-
+    MatButtonToggleModule,
+    MatInputModule,
+    MatButtonModule,
+    HttpClientModule,
+    HttpClientXsrfModule
   ],
   providers: [],
   bootstrap: [AppComponent]
