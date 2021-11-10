@@ -10,7 +10,7 @@ import { AppServiceService } from './app-service.service';
   providers: []
 })
 export class AppComponent implements OnInit {
-  title = 'MyPortfolio';
+  title = 'James Gabbitus Portfolio';
   svgColor = 'black';
   toggleControl = new FormControl(false);
   lineColor = 'black';
@@ -46,10 +46,6 @@ export class AppComponent implements OnInit {
     this.service.postData(a);
   }
 
-  onKey(event: any) { // without type info
-    this.postDataToApi(event.target.value);
-  }
-
   @HostBinding('class') className = '';
 
   ngOnInit(): void {
@@ -60,10 +56,10 @@ export class AppComponent implements OnInit {
         this.className = darkClassName;
         this.svgColor = 'white';
         this.lineColor = 'white';
-        this.toolbarShadow = '0 4px 8px 0 #4666FF';
-        this.buttonBorders = '1px solid #A1B1FF';
-        this.routerBorder = '1px solid 	#1E90FF';
-        this.routerShadow = '0 4px 19px 0 rgba(114, 108, 117, 0.562)';
+        this.toolbarShadow = '0 4px 8px 0 red';
+        this.buttonBorders = '1px solid red';
+        this.routerBorder = '1px solid 	red';
+        this.routerShadow = '0 4px 19px 0 red';
       } else {
         this.className = '';
         this.svgColor = 'black'

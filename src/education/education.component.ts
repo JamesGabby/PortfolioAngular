@@ -16,6 +16,6 @@ export class EducationComponent {
     who we are as individuals and society, and how these theories have shaped our ideas about humankind.
      Finding a personal philosophical voice and developing a rich set of invaluable analytical
       and critical skills for the future.`;
-  shortText2 = `Units on this course included: `;
+  shortText2 = `The units from each year on this course: `;
    
 }

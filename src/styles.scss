@@ -72,7 +72,7 @@ $angular-dark-theme: mat.define-dark-theme(
 
 .main-card {
     height: 1600px;
-    width: 97.9%;
+    width: 100%;
     margin-top: -7px;
     overflow: auto;
 }
@@ -80,8 +80,8 @@ $angular-dark-theme: mat.define-dark-theme(
 .router-card {
     margin: auto;
     margin-top: 20px;
-    height: 1300px;
-    width: 80%; 
+    height: 1310px;
+    width: 90%; 
     overflow: auto;
     display: block;
     text-align: center;
@@ -188,14 +188,8 @@ $waveDur: 3500ms;
 .container- {
   position: absolute;
   height: 1.3rem;
-  width: 17rem;
-  left: 48%;
+  left: 40%;
   transform: translate(-50%, -50%);
-  opacity: 1;
-}
-
-a:hover + .container- {
-  opacity: 0;
 }
 
 .text {
@@ -264,8 +258,8 @@ a:hover + .container- {
 
 .coast { // wave: translate-x
   position: absolute;
-  left: -0.85rem;
-  bottom: 0.2rem;
+  left: -0.65rem;
+  bottom: 0.5rem;
   width: 7.7rem;
   height: -3.4rem;
   display: inline-block;
@@ -275,7 +269,7 @@ a:hover + .container- {
 
 .wave-rel-wrap {
   position: relative;
-  width: 100%;
+  width: 170%;
   height: 100%;
   perspective: 3rem;
   perspective-origin: 0%, 50%;
@@ -283,7 +277,7 @@ a:hover + .container- {
 
 .wave { // wave: width && scale && rotate 
   position: absolute;
-  width: 6.2rem;
+  width: 7.2rem;
   height: 2.2rem;
   border-radius: 1.1rem;
   background: radial-gradient(ellipse at center, rgba(116, 241, 252, 1) 0%, rgba(50, 230, 255, 1) 73%, rgba(21, 199, 250, 1) 100%);
@@ -335,10 +329,10 @@ a:hover + .container- {
     transform: translate3d(0, 0, 0);
   }
   50% {
-    transform: translate3d(16rem, 0, 0);
+    transform: translate3d(20rem, 0, 0);
   }
   100% {
-    transform: translate3d(16rem, 0, 0);
+    transform: translate3d(20rem, 0, 0); //16
   }
 }
 
@@ -383,18 +377,22 @@ a:hover + .container- {
 }
 
 #hover {
-  position: static;
+  position: auto;
   display: flex;
   justify-content: center;
-  margin-left: 25%;
+  margin-left: 24.5%;
+  text-align: center;
   -webkit-transition: all 500ms ease-in-out;
   -moz-transition: all 500ms ease-in-out;
   -ms-transition: all 500ms ease-in-out;
   -o-transition: all 500ms ease-in-out;
   transition: all 500ms ease-in-out;
-  font-size: 25px;
+  font-size: 22px;
 }
 
+* {
+  box-sizing: border-box;
+}
 //--
 
 #magic-button {
@@ -418,6 +416,7 @@ a:hover + .container- {
 }
 
 //--
+
 #home-page {
   position: absolute;
   margin: 5% 0 0 25%;
@@ -429,9 +428,14 @@ a:hover + .container- {
   min-width: 150px;
   max-width: 500px;
   width: 100%;
-  margin: 2% 0 0 40%;
+  margin: 2% 0 0 30%;
 }
 
 .comment-form button {
-  margin: 0 0 0 15px;
+  margin: 16px 0 0 7px;
+  position: absolute;
+}
+
+.comment-full-width {
+  width: 100%;
 }
