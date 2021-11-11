@@ -17,5 +17,9 @@ export class EducationComponent {
      Finding a personal philosophical voice and developing a rich set of invaluable analytical
       and critical skills for the future.`;
   shortText2 = `The units from each year on this course: `;
+
+
+
+
    
 }

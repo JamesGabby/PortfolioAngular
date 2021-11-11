@@ -16,8 +16,9 @@ export class AboutComponent {
 
   beforeLan = 'Proficiency in: ';
   languages = `JavaScript, TypeScript, Java, Node, Angular and SQL.`;
-  
+
   beforeOth = 'Worked with: ';
   other = `ReactJS, ExpressJS, AWS, Google Cloud, PostgreSQL, MySQL, NoSQL, MongoDB, Android, 
   JQuery, WebAssembly, Emscripten, Ajax, APIs (REST+SOAP), HTML5, SCSS, JSP, MVC.`;
+
 }
