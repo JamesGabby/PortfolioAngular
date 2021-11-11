@@ -61,17 +61,8 @@ $angular-dark-theme: mat.define-dark-theme(
     flex-wrap: wrap-reverse;
 }
 
-@media screen and (max-width: 500px) {
-  .toolbar, .name-spacer {
-    float: none;
-    display: block;
-    text-align: left;
-    margin-left: 0;
-  }
-}
-
 .main-card {
-    height: 1600px;
+    height: 1640px;
     width: 100%;
     margin-top: -7px;
     overflow: auto;
@@ -79,8 +70,8 @@ $angular-dark-theme: mat.define-dark-theme(
 
 .router-card {
     margin: auto;
-    margin-top: 20px;
-    height: 1310px;
+    margin-top: 15px;
+    height: 1350px;
     width: 90%; 
     overflow: auto;
     display: block;
@@ -147,7 +138,7 @@ svg.material-icons:not(:last-child) {
   border: 1px solid rgb(145, 167, 238);
   height: 40px;
   width: 200px;
-  margin: 30px 8px 16px;
+  margin: 25px 8px 16px;
   padding: 16px;
   display: flex;
   flex-direction: row;
@@ -180,10 +171,102 @@ a:hover {
   text-decoration: none;
 }
 
-//--name animation
-$textDur: 1750ms;
-$waveDur: 3500ms;
+* {
+  box-sizing: border-box;
+}
 
+#magic-button {
+  cursor: pointer;
+}
+
+.icon-display {
+  transform: scale(1.6);
+  margin: 0 0 5px 0;
+}
+
+#home-page {
+  margin: 2% 0 0 0;
+}
+
+#home-page .homeText {
+  font-size: 1.5rem;
+}
+
+.comment-form {
+  min-width: 150px;
+  max-width: 500px;
+  width: 100%;
+  margin: 2% 0 0 30%;
+}
+
+.comment-form button {
+  margin: 16px 0 0 7px;
+  position: absolute;
+}
+
+.comment-full-width {
+  width: 100%;
+}
+
+
+
+// Name and animated name
+#myName {
+  position: auto;
+  display: flex;
+  margin-left: 24.5%;
+  -webkit-transition: all 500ms ease-in-out;
+  -moz-transition: all 500ms ease-in-out;
+  -ms-transition: all 500ms ease-in-out;
+  -o-transition: all 500ms ease-in-out;
+  transition: all 500ms ease-in-out;
+  font-size: 22px;
+}
+
+#myNameAnimated {
+  opacity: 0.0;
+  -webkit-transition: all 500ms ease-in-out;
+  -moz-transition: all 500ms ease-in-out;
+  -ms-transition: all 500ms ease-in-out;
+  -o-transition: all 500ms ease-in-out;
+  transition: all 500ms ease-in-out;
+}
+
+#magic-button-toggle {
+  transform: scale(0.4);
+  border-radius: 40px;
+  opacity: 0.7;
+}
+
+#magic-div {
+  margin: 0 0 2.5px 0;
+}
+
+:root {
+  --text-before: 1750ms;
+  --text-after: 0ms;
+  --wave-before: 3500ms;
+  --wave-after: 0ms;
+}
+
+@media screen and (max-width: 500px) { //870
+  #myName {
+    position: absolute;
+    opacity: 0;
+  }
+
+  :root {
+    --text-before: var(--text-after);
+    --wave-before: var(--wave-after);
+  }
+
+  .text {
+    opacity: 0;
+  }
+}
+
+$textDur: var(--text-before);
+$waveDur: var(--wave-before); 
 
 .container- {
   position: absolute;
@@ -365,77 +448,3 @@ $waveDur: 3500ms;
   }
 }
 
-//--
-
-#stuff {
-  opacity: 0.0;
-  -webkit-transition: all 500ms ease-in-out;
-  -moz-transition: all 500ms ease-in-out;
-  -ms-transition: all 500ms ease-in-out;
-  -o-transition: all 500ms ease-in-out;
-  transition: all 500ms ease-in-out;
-}
-
-#hover {
-  position: auto;
-  display: flex;
-  justify-content: center;
-  margin-left: 24.5%;
-  text-align: center;
-  -webkit-transition: all 500ms ease-in-out;
-  -moz-transition: all 500ms ease-in-out;
-  -ms-transition: all 500ms ease-in-out;
-  -o-transition: all 500ms ease-in-out;
-  transition: all 500ms ease-in-out;
-  font-size: 22px;
-}
-
-* {
-  box-sizing: border-box;
-}
-//--
-
-#magic-button {
-  cursor: pointer;
-
-}
-
-.icon-display {
-  transform: scale(1.6);
-  margin: 0 0 5px 0;
-}
-
-#magic-button-toggle {
-  transform: scale(0.4);
-  border-radius: 40px;
-  opacity: 0.7;
-}
-
-#magic-div {
-  margin: 0 0 2.5px 0;
-}
-
-//--
-
-#home-page {
-  position: absolute;
-  margin: 5% 0 0 25%;
-}
-
-//--
-
-.comment-form {
-  min-width: 150px;
-  max-width: 500px;
-  width: 100%;
-  margin: 2% 0 0 30%;
-}
-
-.comment-form button {
-  margin: 16px 0 0 7px;
-  position: absolute;
-}
-
-.comment-full-width {
-  width: 100%;
-}

@@ -14,10 +14,16 @@
   margin-left: 10px;
 }
 
-//--
-
-body {
-  flex-wrap: wrap;
-
+mat-list {
+  position: relative;
+  white-space: nowrap;
 }
+
+@media screen and (max-width: 500px) {
+  mat-list {
+    white-space: normal;
+  }
+}
+
+
 

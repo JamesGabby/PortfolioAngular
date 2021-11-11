@@ -21,8 +21,8 @@
       </mat-button-toggle-group>
     </a>
   </div>
-  <div id="hover" [style.opacity]="nameVisibility">James Gabbitus</div>
-  <div id="stuff" [style.opacity]="magic">
+  <div id="myName" [style.opacity]="nameVisibility">James Gabbitus</div>
+  <div id="myNameAnimated" [style.opacity]="magic">
     <div class="container-">
       <div class="coast">
         <div class="wave-rel-wrap">
@@ -93,7 +93,7 @@
   
   <mat-card class="router-card" [style.border]="routerBorder" [style.box-shadow]="routerShadow">
     <div id="home-page">
-      <h1 [style.display]="homeText">Welcome! <br>Feel free to browse my portfolio with the navigation above</h1>
+      <h1 [style.display]="homeText" class="homeText">Welcome! <br>Feel free to browse my portfolio with the navigation above</h1>
     </div>
 
     <router-outlet></router-outlet>
