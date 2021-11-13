@@ -47,7 +47,7 @@ $angular-dark-theme: mat.define-dark-theme(
 
 .toolbar {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    top: -7px;
+    top: -8px;
     right: 10px;
     left: 0;
     box-shadow: 0 4px 8px 0 rgba(114, 108, 117, 0.562);
@@ -184,14 +184,6 @@ a:hover {
   margin: 0 0 5px 0;
 }
 
-#home-page {
-  margin: 2% 0 0 0;
-}
-
-#home-page .homeText {
-  font-size: 1.5rem;
-}
-
 .comment-form {
   min-width: 150px;
   max-width: 500px;
@@ -207,8 +199,6 @@ a:hover {
 .comment-full-width {
   width: 100%;
 }
-
-
 
 // Name and animated name
 #myName {
