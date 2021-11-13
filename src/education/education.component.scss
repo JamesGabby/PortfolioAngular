@@ -1,8 +1,8 @@
 .card1 {
   margin: auto;
-  max-width: 800px;
-  margin-bottom: 8px;
-  margin-top: 20px;
+  width: 1000px;
+  margin-bottom: 40px;
+  margin-top: 40px;
 }
 
 .eduImg {
@@ -11,19 +11,19 @@
 }
 
 .space-from-arrow {
-  margin-left: 10px;
+  margin-left: 2px;
 }
 
-mat-list {
-  position: relative;
-  white-space: nowrap;
+mat-icon {
+  transform: scale(0.5);
 }
 
-@media screen and (max-width: 500px) {
-  mat-list {
-    white-space: normal;
-  }
+mat-list-item {
+  margin: -15px;
 }
 
+mat-panel-title {
+  opacity: 0.8;
+}
 
 

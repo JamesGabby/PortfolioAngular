@@ -14,11 +14,10 @@ export class AboutComponent {
   a growth mindset; always finding continuous ways to learn, improve and advance
   my technological and professional skills.`;
 
-  beforeLan = 'Proficiency in: ';
-  languages = `JavaScript, TypeScript, Java, Node, Angular and SQL.`;
-
-  beforeOth = 'Worked with: ';
-  other = `ReactJS, ExpressJS, AWS, Google Cloud, PostgreSQL, MySQL, NoSQL, MongoDB, Android, 
-  JQuery, WebAssembly, Emscripten, Ajax, APIs (REST+SOAP), HTML5, SCSS, JSP, MVC.`;
+  languages = `The languages I'm proficient with are: JavaScript, TypeScript, Java, C++ and SQL.`;
+  frameworks = `The frameworks I'm familiar with are: Angular and Spring.`;
+  libraries = `The libraries I'm comfortable with are: Express, React and JQuery.`;
+  cloud = `The cloud providers I'm comfortable with are: Google Cloud Provider (GCP), Amazon Web Services (AWS)`;
+  databases = `The databases I know are: MySQL, any RDBM, MongoDB`;
 
 }

@@ -91,14 +91,13 @@
     </a>
   </div>
   
-  <mat-card class="router-card" [style.border]="routerBorder" [style.box-shadow]="routerShadow">
-    <div id="home-page">
-      <h1 [style.display]="homeText" class="homeText">Welcome! <br>Feel free to browse my portfolio with the navigation above</h1>
-    </div>
+    
+  <h1 [style.display]="homeText" style="text-align: center; margin-top: 50px;">Welcome! <br>Feel free to browse my portfolio with the navigation above</h1>
 
-    <router-outlet></router-outlet>
-  </mat-card>
+  <router-outlet></router-outlet>
 
+</mat-card>
+<footer>
   <form class="comment-form"> 
     <mat-form-field class="comment-full-width" appearance="fill">
       <mat-label>Leave a comment</mat-label>
@@ -106,9 +105,4 @@
     </mat-form-field>
     <button type="button" mat-raised-button (click)="postDataToApi(box.value); box.value=''">Submit</button>
   </form>
-</mat-card>
-
-
-
-
-
+</footer>

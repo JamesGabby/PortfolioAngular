@@ -1,44 +1,42 @@
 .card1 {
     margin: auto;
-    max-width: 800px;
+    max-width: 1000px;
     margin-bottom: 8px;
     margin-top: 20px;
-  }
+}
   
-  .eduImg {
-    width: 150px;
-    margin-top: -20px;
-  }
-  
-  .space-from-arrow {
-    margin-left: 10px;
-  }
-  
-  //--
-  
-  body {
-    flex-wrap: wrap-reverse;
-  }
+.eduImg {
+  width: 150px;
+  margin-top: -20px;
+}
 
-  mat-expansion-panel {
-    text-align: left;
-  }
+.space-from-arrow {
+  margin-left: 10px;
+}
 
-  mat-panel-title {
-    font-size: 18px;
-  }
+//--
+mat-expansion-panel {
+  text-align: left;
+}
 
-  mat-panel-description {
-    font-size: 1rem;
-    position: absolute;
-  }
+mat-panel-title {
+  font-size: 18px;
+}
 
-  #exc {
-    position: relative;
-  }
+mat-panel-description {
+  font-size: 1rem;
+  position: absolute;
+}
 
-  #desc-dates {
-    font-size: 14px;
+#exc {
+  position: relative;
+}
 
-  }
+#desc-dates {
+  font-size: 14px;
 
+}
+
+.list_2 {
+  margin-top: -20px;
+}
