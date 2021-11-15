@@ -54,20 +54,48 @@
       <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path [style.fill]="svgColor" d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/></svg>
     </a>
   </div>
-  
     
   <h1 [style.display]="homeText" style="text-align: center; margin-top: 50px;">Welcome! <br>Feel free to browse my portfolio with the navigation above</h1>
 
-  <router-outlet [style.background-color]="routerColor"></router-outlet>
-
+  <router-outlet>
+  </router-outlet>
 
 </mat-card>
-<div id="bottom">
+
+<div class="form-body">
+  <form class="comment-form"
+    autocomplete="off"
+    [formGroup]="createForm"
+    (ngSubmit)="onCreate(createForm.value)"
+  >
+    <div>
+      <mat-form-field class="name-label" appearance="fill">
+        <mat-label>Name</mat-label>
+        <input matInput formControlName="name" autocomplete="off" />
+      </mat-form-field>
+    
+      <mat-form-field class="comment-full-width" appearance="fill">
+        <mat-label>Leave a comment</mat-label>
+        <textarea matInput formControlName="description" autocomplete="off"></textarea>
+      </mat-form-field>
+    </div>
+   
+    <button type="submit" mat-raised-button>Submit</button>
+  </form>
+</div>
+<div style="margin-top: 3%;"></div>
+<h2 style="text-align: center;">Comments:</h2>
+<div *ngFor="let restaurant of restaurants" class="comments-list">
+  <h3><b>{{ restaurant.name }}</b>: {{ restaurant.description }}</h3>
+</div>
+
+ <!-- Used to send to local Node server MongoDB -->
+<!-- <div id="bottom">
   <form class="comment-form"> 
     <mat-form-field class="comment-full-width" appearance="fill">
       <mat-label>Leave a comment</mat-label>
-      <textarea matInput #box ></textarea>
+      <textarea matInput #box></textarea>
     </mat-form-field>
     <button type="button" mat-raised-button (click)="postDataToApi(box.value); box.value=''">Submit</button>
   </form>
-</div>
+</div> -->

@@ -19,5 +19,5 @@ export class AboutComponent {
   libraries = `The libraries I'm comfortable with are: Express, React and JQuery.`;
   cloud = `The cloud providers I'm comfortable with are: Google Cloud Provider (GCP), Amazon Web Services (AWS)`;
   databases = `The databases I know are: MySQL, any RDBM, MongoDB`;
-
+  child = ''
 }

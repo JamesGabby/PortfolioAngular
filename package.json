@@ -20,6 +20,7 @@
     "@angular/platform-browser": "~12.2.0",
     "@angular/platform-browser-dynamic": "~12.2.0",
     "@angular/router": "~12.2.0",
+    "@aws-amplify/ui-angular": "^1.0.33",
     "aws-amplify": "^4.3.6",
     "rollup-plugin-graphql-ast-import": "^0.2.0",
     "rxjs": "~6.6.0",

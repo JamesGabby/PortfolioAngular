@@ -11,8 +11,9 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatInputModule } from '@angular/material/input';
 import { HttpClientXsrfModule } from '@angular/common/http';
 import { HttpClientModule } from '@angular/common/http';
-import { ReactiveFormsModule } from '@angular/forms';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
+import { AmplifyUIAngularModule } from '@aws-amplify/ui-angular';
 
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -41,6 +42,7 @@ import { EducationComponent } from 'src/education/education.component';
     MatIconModule,
     MatSlideToggleModule,
     ReactiveFormsModule,
+    FormsModule,
     MatCardModule,
     MatExpansionModule,
     MatListModule,
@@ -48,7 +50,8 @@ import { EducationComponent } from 'src/education/education.component';
     MatInputModule,
     MatButtonModule,
     HttpClientModule,
-    HttpClientXsrfModule
+    HttpClientXsrfModule,
+    AmplifyUIAngularModule
   ],
   providers: [],
   bootstrap: [AppComponent]

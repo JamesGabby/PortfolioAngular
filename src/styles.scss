@@ -176,7 +176,7 @@ a:hover {
 }
 
 .comment-form button {
-  margin: 16px 0 0 7px;
+  margin: 0;
   position: absolute;
 }
 
@@ -184,10 +184,18 @@ a:hover {
   width: 100%;
 }
 
+.name-label {
+  width: 40%;
+}
+
+.comments-list {
+  text-align: center;
+}
+
 #myName {
   position: auto;
   display: flex;
-  margin-left: 28%;
+  margin-left: 28.4%;
   -webkit-transition: all 500ms ease-in-out;
   -moz-transition: all 500ms ease-in-out;
   -ms-transition: all 500ms ease-in-out;
@@ -195,4 +203,12 @@ a:hover {
   transition: all 500ms ease-in-out;
   font-size: 22px;
 }
+
+@media only screen and (max-width: 500px) {
+  #myName {
+    margin-left: auto;
+    font-size: 18px;
+  }
+}
+
 

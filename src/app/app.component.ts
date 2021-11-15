@@ -1,15 +1,19 @@
 import { HttpClient } from '@angular/common/http';
-import { Component, HostBinding, OnInit } from '@angular/core';
-import { FormControl } from '@angular/forms';
+import { Component, HostBinding, OnInit, OnDestroy } from '@angular/core';
+import { FormControl, FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { AppServiceService } from './app-service.service';
+import { ViewEncapsulation } from '@angular/core';
+import { APIService, Restaurant } from "./API.service";
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
-  providers: []
+  providers: [],
+  encapsulation: ViewEncapsulation.None
 })
-export class AppComponent implements OnInit {
+export class AppComponent implements OnInit, OnDestroy {
   title = 'James Gabbitus Portfolio';
   svgColor = 'black';
   toggleControl = new FormControl(false);
@@ -19,12 +23,35 @@ export class AppComponent implements OnInit {
   buttonBorders = '1px solid #EEE8AA';
   buttonBack = '';
   routerBorder = '1px solid #EEE8AA';
-  fill = 'yellow';
   nameVisibility = '';
   homeText = '';
-  routerColor = 'red';
 
-  constructor(private http: HttpClient, private service: AppServiceService) {}
+  public createForm: FormGroup;
+  public restaurants: Array<Restaurant> = [];
+
+  constructor(private api: APIService, private fb: FormBuilder, 
+    private http: HttpClient, private service: AppServiceService) {
+
+    this.createForm = this.fb.group({
+      name: ["", Validators.required],
+      description: ["", Validators.required],
+      city: [""]
+    });
+  }
+
+  public onCreate(restaurant: Restaurant) {
+    this.api
+      .CreateRestaurant(restaurant)
+      .then((event) => {
+        console.log("item created!");
+        this.createForm.reset();
+      })
+      .catch((e) => {
+        console.log("error creating restaurant...", e);
+      });
+  }
+
+  /////////////////////
 
   hideHomeText() {
     this.homeText = 'none';
@@ -35,6 +62,7 @@ export class AppComponent implements OnInit {
   }
 
   @HostBinding('class') className = '';
+  private subscription: Subscription | null = null;
 
   ngOnInit(): void {
     this.toggleControl.valueChanges.subscribe((darkMode) => {
@@ -49,7 +77,6 @@ export class AppComponent implements OnInit {
         this.buttonBack = '#282828';
         this.routerBorder = '1px solid 	red';
         this.routerShadow = '0 4px 19px 0 red';
-        this.routerColor = 'yellow'
       } else {
         this.className = '';
         this.svgColor = 'black'
@@ -61,8 +88,27 @@ export class AppComponent implements OnInit {
         this.routerShadow = '';
       }
     });
+
+      /* fetch restaurants when app loads */
+      this.api.ListRestaurants().then((event) => {
+          this.restaurants = event.items as Restaurant[];
+      });
+
+      /* subscribe to new restaurants being created */
+      this.subscription = <Subscription>(
+         this.api.OnCreateRestaurantListener.subscribe((event: any) => {
+             const newRestaurant = event.value.data.onCreateRestaurant;
+             this.restaurants = [newRestaurant, ...this.restaurants];
+         })
+      );
   }
 
+  ngOnDestroy() {
+    if (this.subscription) {
+      this.subscription.unsubscribe();
+    }
+    this.subscription = null;
+  }
  
   
 }
