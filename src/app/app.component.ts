@@ -16,28 +16,15 @@ export class AppComponent implements OnInit {
   lineColor = 'black';
   toolbarShadow = '';
   routerShadow = '';
-  buttonBorders = '1px solid #DCDCDC';
+  buttonBorders = '1px solid #EEE8AA';
   buttonBack = '';
-  routerBorder = '1px solid #DCDCDC';
-  animatedText = '';
+  routerBorder = '1px solid #EEE8AA';
   fill = 'yellow';
-  magic = "0";
-  isMagic = false;
   nameVisibility = '';
   homeText = '';
+  routerColor = 'red';
 
   constructor(private http: HttpClient, private service: AppServiceService) {}
-
-  magicToggle() {
-    this.isMagic = !this.isMagic;
-    if (this.isMagic) {
-      this.magic = "1";
-      this.nameVisibility = '0';
-    } else {
-      this.magic = "0";
-      this.nameVisibility = '1';
-    }
-  }
 
   hideHomeText() {
     this.homeText = 'none';
@@ -62,13 +49,14 @@ export class AppComponent implements OnInit {
         this.buttonBack = '#282828';
         this.routerBorder = '1px solid 	red';
         this.routerShadow = '0 4px 19px 0 red';
+        this.routerColor = 'yellow'
       } else {
         this.className = '';
         this.svgColor = 'black'
         this.lineColor = 'black';
         this.toolbarShadow = '';
-        this.buttonBorders = '1px solid #DCDCDC';
-        this.buttonBack = '#8D8741';
+        this.buttonBorders = '1px solid #EEE8AA';
+        this.buttonBack = '#FFFFF0';
         this.routerBorder = '';
         this.routerShadow = '';
       }

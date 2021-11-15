@@ -10,45 +10,9 @@
   <mat-icon class="mr-8">brightness_5</mat-icon>
   <mat-slide-toggle [formControl]="toggleControl" class="mr-8"></mat-slide-toggle>
   <mat-icon class="mr-8">bedtime</mat-icon>
-  <div id="magic-div">
-    <a (click)="magicToggle()" id="magic-button">
-      <mat-button-toggle-group multiple id="magic-button-toggle">
-        <mat-button-toggle value="bold">
-          <mat-icon aria-hidden="false" aria-label="Right arrow icon" class="icon-display">
-            question_mark
-          </mat-icon>
-        </mat-button-toggle>
-      </mat-button-toggle-group>
-    </a>
-  </div>
+  
   <div id="myName" [style.opacity]="nameVisibility">James Gabbitus</div>
-  <div id="myNameAnimated" [style.opacity]="magic">
-    <div class="container-">
-      <div class="coast">
-        <div class="wave-rel-wrap">
-          <div class="wave"></div>
-        </div>
-      </div>
-      <div class="coast delay">
-        <div class="wave-rel-wrap">
-          <div class="wave delay"></div>
-        </div>
-      </div>
-      <div class="text text-j" [style.color]="animatedText">J</div>
-      <div class="text text-a" [style.color]="animatedText">a</div>
-      <div class="text text-m" [style.color]="animatedText">m</div>
-      <div class="text text-e" [style.color]="animatedText">e</div>
-      <div class="text text-s" [style.color]="animatedText">s</div>
-      <div class="text text-g" [style.color]="animatedText">G</div>
-      <div class="text text-a2" [style.color]="animatedText">a</div>
-      <div class="text text-b" [style.color]="animatedText">b</div>
-      <div class="text text-b2" [style.color]="animatedText">b</div>
-      <div class="text text-i" [style.color]="animatedText">i</div>
-      <div class="text text-t" [style.color]="animatedText">t</div>
-      <div class="text text-u" [style.color]="animatedText">u</div>
-      <div class="text text-s2" [style.color]="animatedText">s</div>
-    </div>  
-</div> 
+   
   <span class="mode-spacer"></span>
   <div class="flex-stretch"></div>
 
@@ -94,7 +58,7 @@
     
   <h1 [style.display]="homeText" style="text-align: center; margin-top: 50px;">Welcome! <br>Feel free to browse my portfolio with the navigation above</h1>
 
-  <router-outlet></router-outlet>
+  <router-outlet [style.background-color]="routerColor"></router-outlet>
 
 
 </mat-card>

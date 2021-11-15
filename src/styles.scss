@@ -7,7 +7,6 @@
 
 $angular-primary: mat.define-palette(mat.$teal-palette, 500, 100, 900);
 $angular-accent: mat.define-palette(mat.$blue-palette, A200, A100, A400);
-
 $angular-warn: mat.define-palette(mat.$red-palette);
 
 $angular-default-theme: mat.define-light-theme(
@@ -51,17 +50,19 @@ $angular-dark-theme: mat.define-dark-theme(
     font-weight: 550;
     margin: auto;
     overflow: visible;
-    position: relative;
+    position: absolute;
     height: 70px;
-    background-color: #659DBD;
+    z-index: 100; 
+    position: fixed;
+    background-color: #F0F8FF;
 }
 
 .main-card {
     height: 1800px;
     width: 100%;
-    margin-top: 0px;
     overflow: auto;
-    background-color: blanchedalmond;
+    background-color: #F0FFF0;
+    border-radius: 0;
 }
 
 .mode-spacer {
@@ -124,7 +125,7 @@ svg.material-icons:not(:last-child) {
   border: 1px solid rgb(145, 167, 238);
   height: 40px;
   width: 200px;
-  margin: 15px 8px 16px;
+  margin: 100px 8px 16px;
   padding: 16px;
   display: flex;
   flex-direction: row;
@@ -133,7 +134,7 @@ svg.material-icons:not(:last-child) {
   transition: all 0.2s ease-in-out;
   line-height: 24px;
   box-shadow: 0 4px 8px 0 rgba(114, 108, 117, 0.562);
-  background-color: #8D8741;
+  background-color: #FFFFF0;
 }
 
 .card-container .card:not(:last-child) {
@@ -162,10 +163,6 @@ a:hover {
   box-sizing: border-box;
 }
 
-#magic-button {
-  cursor: pointer;
-}
-
 .icon-display {
   transform: scale(1.6);
   margin: 0 0 5px 0;
@@ -187,241 +184,15 @@ a:hover {
   width: 100%;
 }
 
-// Name and animated name
 #myName {
   position: auto;
   display: flex;
-  margin-left: 24.5%;
+  margin-left: 28%;
   -webkit-transition: all 500ms ease-in-out;
   -moz-transition: all 500ms ease-in-out;
   -ms-transition: all 500ms ease-in-out;
   -o-transition: all 500ms ease-in-out;
   transition: all 500ms ease-in-out;
   font-size: 22px;
-}
-
-#myNameAnimated {
-  opacity: 0.0;
-  -webkit-transition: all 500ms ease-in-out;
-  -moz-transition: all 500ms ease-in-out;
-  -ms-transition: all 500ms ease-in-out;
-  -o-transition: all 500ms ease-in-out;
-  transition: all 500ms ease-in-out;
-}
-
-#magic-button-toggle {
-  transform: scale(0.4);
-  border-radius: 40px;
-  opacity: 0.7;
-}
-
-#magic-div {
-  margin: 0 0 2.5px 0;
-}
-
-:root {
-  --text-before: 1750ms;
-  --text-after: 0ms;
-  --wave-before: 3500ms;
-  --wave-after: 0ms;
-}
-
-@media screen and (max-width: 500px) { //870
-  #myName {
-    position: absolute;
-    opacity: 0;
-  }
-
-  :root {
-    --text-before: var(--text-after);
-    --wave-before: var(--wave-after);
-  }
-
-  .text {
-    opacity: 0;
-  }
-}
-
-$textDur: var(--text-before);
-$waveDur: var(--wave-before); 
-
-.container- {
-  position: absolute;
-  height: 1.3rem;
-  left: 40%;
-  transform: translate(-50%, -50%);
-}
-
-.text {
-  font-family: 'Muli', Helvetica, sans-serif;
-  font-size: 2rem;
-  font-weight: 500;
-  display: inline-block;
-  position: absolute;
-  bottom: -60px;
-  animation: text $textDur ease-in infinite;
-  transform: translatez(0);
-  &-j {
-    left: 0rem;
-    transform: translate3d(0, -4rem, 0);
-    animation: text-w $textDur ease-in infinite;
-  }
-  &-a {
-    left: 1rem;
-    animation-delay: 150ms;
-  }
-  &-m {
-    left: 2.5rem;
-    animation-delay: 230ms;
-  }
-  &-e {
-    left: 4.5rem;
-    animation-delay: 310ms;
-  }
-  &-s {
-    left: 6rem;
-    animation-delay: 390ms;
-  }
-  &-g {
-    left: 9rem;
-    animation-delay: 470ms;
-  }
-  &-a2 {
-    left: 10.8rem;
-    animation-delay: 550ms;
-  }
-  &-b {
-    left: 12rem;
-    animation-delay: 630ms;
-  }
-  &-b2 {
-    left: 13.5rem;
-    animation-delay: 710ms;
-  }
-  &-i {
-    left: 15rem;
-    animation-delay: 780ms;
-  }
-  &-t {
-    left: 16rem;
-    animation-delay: 860ms;
-  }
-  &-u {
-    left: 17rem;
-    animation-delay: 940ms;
-  }
-  &-s2 {
-    left: 18.5rem;
-    animation-delay: 1020ms;
-  }
-}
-
-.coast { // wave: translate-x
-  position: absolute;
-  left: -0.65rem;
-  bottom: 0.5rem;
-  width: 7.7rem;
-  height: -3.4rem;
-  display: inline-block;
-  animation: coast $waveDur linear infinite;
-  transform: translateZ(0);
-}
-
-.wave-rel-wrap {
-  position: relative;
-  width: 170%;
-  height: 100%;
-  perspective: 3rem;
-  perspective-origin: 0%, 50%;
-}
-
-.wave { // wave: width && scale && rotate 
-  position: absolute;
-  width: 7.2rem;
-  height: 2.2rem;
-  border-radius: 1.1rem;
-  background: radial-gradient(ellipse at center, rgba(116, 241, 252, 1) 0%, rgba(50, 230, 255, 1) 73%, rgba(21, 199, 250, 1) 100%);
-  display: inline-block;
-  animation: wave $waveDur linear infinite;
-  will-change: width;
-  transform: translateZ(0) scale(0);
-}
-
-.delay {
-  animation-delay: $waveDur / 2;
-}
-
-@keyframes text {
-  0% {
-    transform: translate3d(0, 0, 0);
-  }
-  30% {
-    transform: translate3d(0, 0, 0);
-  }
-  45% {
-    transform: translate3d(0, -4rem, 0);
-  }
-  100% {
-    transform: translate3d(0, 0, 0);
-  }
-}
-
-@keyframes text-w {
-  0% {
-    transform: translate3d(0, -4rem, 0);
-  }
-  38% {
-    transform: translate3d(0, -4rem, 0);
-  }
-  69% {
-    transform: translate3d(0, 0, 0);
-  }
-  100% {
-    transform: translate3d(0, -4rem, 0);
-  }
-}
-
-@keyframes coast {
-  0% {
-    transform: translate3d(0, 0, 0);
-  }
-  23% {
-    transform: translate3d(0, 0, 0);
-  }
-  50% {
-    transform: translate3d(20rem, 0, 0);
-  }
-  100% {
-    transform: translate3d(20rem, 0, 0); //16
-  }
-}
-
-@keyframes wave {
-  0% {
-    transform: scale(0);
-    width: 2.2rem;
-  }
-  10% {
-    transform: scale(1);
-  }
-  23% {
-    width: 2.2rem;
-  }
-  32% {
-    width: 6.1rem;
-  }
-  42% {
-    width: 5rem;
-    transform: rotateY(0deg) scale(1, 1);
-  }
-  51% {
-    transform: rotateY(90deg) scale(0.6, 0.2);
-  }
-  52% {
-    transform: rotateY(90deg) scale(0);
-  }
-  100% {
-    transform: rotateY(90deg) scale(0);
-  }
 }
 

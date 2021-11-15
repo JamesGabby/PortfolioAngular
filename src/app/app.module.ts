@@ -33,7 +33,7 @@ import { EducationComponent } from 'src/education/education.component';
     RouterModule.forRoot([
       {path: 'about', component: AboutComponent},
       {path: 'education', component: EducationComponent},
-      {path: 'experience', component: ExperienceComponent}
+      {path: 'experience', component: ExperienceComponent},
     ]),
     AppRoutingModule,
     BrowserAnimationsModule,
