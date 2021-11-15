@@ -17,6 +17,7 @@ export class AppComponent implements OnInit {
   toolbarShadow = '';
   routerShadow = '';
   buttonBorders = '1px solid #DCDCDC';
+  buttonBack = '';
   routerBorder = '1px solid #DCDCDC';
   animatedText = '';
   fill = 'yellow';
@@ -58,6 +59,7 @@ export class AppComponent implements OnInit {
         this.lineColor = 'white';
         this.toolbarShadow = '0 4px 8px 0 red';
         this.buttonBorders = '1px solid red';
+        this.buttonBack = '#282828';
         this.routerBorder = '1px solid 	red';
         this.routerShadow = '0 4px 19px 0 red';
       } else {
@@ -66,11 +68,14 @@ export class AppComponent implements OnInit {
         this.lineColor = 'black';
         this.toolbarShadow = '';
         this.buttonBorders = '1px solid #DCDCDC';
+        this.buttonBack = '#8D8741';
         this.routerBorder = '';
         this.routerShadow = '';
       }
     });
   }
+
+ 
   
 }
 

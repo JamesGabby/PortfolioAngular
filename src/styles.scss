@@ -47,35 +47,21 @@ $angular-dark-theme: mat.define-dark-theme(
 
 .toolbar {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    top: -8px;
-    right: 10px;
-    left: 0;
     box-shadow: 0 4px 8px 0 rgba(114, 108, 117, 0.562);
-    border-radius: 4px;
     font-weight: 550;
     margin: auto;
     overflow: visible;
     position: relative;
     height: 70px;
-    background-color: red;
-    flex-wrap: wrap-reverse;
+    background-color: #659DBD;
 }
 
 .main-card {
     height: 1800px;
     width: 100%;
-    margin-top: -7px;
+    margin-top: 0px;
     overflow: auto;
-}
-
-.router-card {
-    margin: auto;
-    margin-top: 15px;
-    height: 1500px;
-    width: 90%; 
-    overflow: auto;
-    display: block;
-    text-align: center;
+    background-color: blanchedalmond;
 }
 
 .mode-spacer {
@@ -122,7 +108,7 @@ svg.material-icons:not(:last-child) {
 }
 
 .card svg.material-icons path {
-  fill: #888;
+  fill: rgb(29, 12, 12);
 }
 
 .card-container {
@@ -147,6 +133,7 @@ svg.material-icons:not(:last-child) {
   transition: all 0.2s ease-in-out;
   line-height: 24px;
   box-shadow: 0 4px 8px 0 rgba(114, 108, 117, 0.562);
+  background-color: #8D8741;
 }
 
 .card-container .card:not(:last-child) {
@@ -188,7 +175,7 @@ a:hover {
   min-width: 150px;
   max-width: 500px;
   width: 100%;
-  margin: 2% 0 0 30%;
+  margin: 1% 0 0 30%;
 }
 
 .comment-form button {
