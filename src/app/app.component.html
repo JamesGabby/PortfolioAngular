@@ -55,7 +55,15 @@
     </a>
   </div>
     
-  <h1 [style.display]="homeText" style="text-align: center; margin-top: 50px;">Welcome! <br>Feel free to browse my portfolio with the navigation above</h1>
+  <h1 [style.display]="homeText" style="text-align: center; margin-top: 50px;">Welcome! <br>Feel free to browse my portfolio with the navigation above<br>
+    <amplify-authenticator>
+      <div>
+        Portfolio
+        <amplify-sign-out></amplify-sign-out>
+      </div>
+      <!-- previous code -->
+    </amplify-authenticator>
+  </h1>
 
   <router-outlet>
   </router-outlet>
@@ -89,7 +97,8 @@
   <h3><b>{{ restaurant.name }}</b>: {{ restaurant.description }}</h3>
 </div>
 
- <!-- Used to send to local Node server MongoDB -->
+ <!-- Used to send to local Node server MongoDB 
+  (only worked with firefox locally, implemented aws amplify with graphQL as solution)-->
 <!-- <div id="bottom">
   <form class="comment-form"> 
     <mat-form-field class="comment-full-width" appearance="fill">
