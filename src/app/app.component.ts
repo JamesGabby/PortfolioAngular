@@ -23,7 +23,6 @@ export class AppComponent implements OnInit, OnDestroy {
   buttonBorders = '1px solid #EEE8AA';
   buttonBack = '';
   routerBorder = '1px solid #EEE8AA';
-  nameVisibility = '';
   homeText = '';
 
   public createForm: FormGroup;

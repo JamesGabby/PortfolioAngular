@@ -3,7 +3,7 @@
 
 <mat-toolbar class="toolbar" [style.box-shadow]="toolbarShadow">
   <a href="/" id="home" [style.color]="svgColor"><mat-icon aria-hidden="false" aria-label="home icon">home</mat-icon></a>
-    Portfolio
+    <p class="portfolio">Portfolio</p>
   <div class="line" [style.background-color]="lineColor"></div>
 
   <div class="mode-spacer"></div>
@@ -11,7 +11,7 @@
   <mat-slide-toggle [formControl]="toggleControl" class="mr-8"></mat-slide-toggle>
   <mat-icon class="mr-8">bedtime</mat-icon>
   
-  <div id="myName" [style.opacity]="nameVisibility">James Gabbitus</div>
+  <div id="myName">James Gabbitus</div>
    
   <span class="mode-spacer"></span>
   <div class="flex-stretch"></div>
@@ -92,7 +92,7 @@
   </form>
 </div>
 <div style="margin-top: 3%;"></div>
-<h2 style="text-align: center;">Comments:</h2>
+<h2 style="text-align: center; position: relative; margin-top: 5%;">Comments:</h2>
 <div *ngFor="let comment of comments" class="comments-list">
   <h3><b>{{ comment.name }}</b>: {{ comment.comment }}</h3>
 </div>

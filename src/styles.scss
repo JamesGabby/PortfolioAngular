@@ -55,12 +55,13 @@ $angular-dark-theme: mat.define-dark-theme(
     z-index: 100; 
     position: fixed;
     background-color: #F0F8FF;
+    max-width: 100%;
 }
 
 .main-card {
     height: 1800px;
-    width: 100%;
-    overflow: auto;
+    max-width: 100%;
+    overflow: hidden;
     background-color: #F0FFF0;
     border-radius: 0;
 }
@@ -114,7 +115,7 @@ svg.material-icons:not(:last-child) {
 
 .card-container {
   display: flex;
-  flex-wrap: wrap;
+  //flex-wrap: wrap;
   justify-content: center;
   margin-top: 0;
 }
@@ -172,20 +173,25 @@ a:hover {
   min-width: 150px;
   max-width: 500px;
   width: 100%;
-  margin: 1% 0 0 30%;
+  margin: 2% 0 0 0;
 }
 
 .comment-form button {
   margin: 0;
-  position: absolute;
+  position: relative;
+  margin-left: 720px;
+
 }
 
 .comment-full-width {
   width: 100%;
+  margin-left: 510px;
+  margin-top: -10px;
 }
 
 .name-label {
   width: 40%;
+  margin-left: 665px;
 }
 
 .comments-list {
@@ -195,7 +201,7 @@ a:hover {
 #myName {
   position: auto;
   display: flex;
-  margin-left: 28.4%;
+  margin-left: 30%;
   -webkit-transition: all 500ms ease-in-out;
   -moz-transition: all 500ms ease-in-out;
   -ms-transition: all 500ms ease-in-out;
@@ -206,9 +212,48 @@ a:hover {
 
 @media only screen and (max-width: 500px) {
   #myName {
-    margin-left: auto;
-    font-size: 18px;
+    margin-left: 10px;
+    font-size: 16px;
+  }
+
+  .mr-8 {
+    margin-right: -5px;
+    margin-bottom: 2px;
+    transform: scale(0.7);
+  }
+
+  .toolbar {
+    width: 400px;
+  }
+
+  .toolbar #twitter-logo {
+    transform: scale(0.7);
+
+  }
+
+  .toolbar #youtube-logo {
+    transform: scale(0.7);
+  }
+
+  .comment-full-width {
+    width: 50%;
+    margin-left: 1.5%;
+    margin-top: 5%;
+  }
+  
+  .name-label {
+    width: 20%;
+    margin-left: 15%;
+    margin-top: 5%;
+  }
+
+  .comment-form button {
+    margin-left: 42%;
   }
 }
 
+.portfolio {
+  padding-top: 10px;
+  font-size: 15px;
+}
 
