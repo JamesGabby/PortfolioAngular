@@ -1,30 +1,27 @@
 # this is an auto generated file. This will be overwritten
-subscription OnCreateRestaurant {
-  onCreateRestaurant {
+subscription OnCreateComment {
+  onCreateComment {
     id
     name
-    description
-    city
+    comment
     createdAt
     updatedAt
   }
 }
-subscription OnUpdateRestaurant {
-  onUpdateRestaurant {
+subscription OnUpdateComment {
+  onUpdateComment {
     id
     name
-    description
-    city
+    comment
     createdAt
     updatedAt
   }
 }
-subscription OnDeleteRestaurant {
-  onDeleteRestaurant {
+subscription OnDeleteComment {
+  onDeleteComment {
     id
     name
-    description
-    city
+    comment
     createdAt
     updatedAt
   }

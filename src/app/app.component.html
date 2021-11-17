@@ -84,7 +84,7 @@
     
       <mat-form-field class="comment-full-width" appearance="fill">
         <mat-label>Leave a comment</mat-label>
-        <textarea matInput formControlName="description" autocomplete="off"></textarea>
+        <textarea matInput formControlName="comment" autocomplete="off"></textarea>
       </mat-form-field>
     </div>
    
@@ -93,8 +93,8 @@
 </div>
 <div style="margin-top: 3%;"></div>
 <h2 style="text-align: center;">Comments:</h2>
-<div *ngFor="let restaurant of restaurants" class="comments-list">
-  <h3><b>{{ restaurant.name }}</b>: {{ restaurant.description }}</h3>
+<div *ngFor="let comment of comments" class="comments-list">
+  <h3><b>{{ comment.name }}</b>: {{ comment.comment }}</h3>
 </div>
 
  <!-- Used to send to local Node server MongoDB 

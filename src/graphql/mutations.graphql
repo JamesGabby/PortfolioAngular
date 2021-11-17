@@ -1,39 +1,36 @@
 # this is an auto generated file. This will be overwritten
-mutation CreateRestaurant(
-  $input: CreateRestaurantInput!
-  $condition: ModelRestaurantConditionInput
+mutation CreateComment(
+  $input: CreateCommentInput!
+  $condition: ModelCommentConditionInput
 ) {
-  createRestaurant(input: $input, condition: $condition) {
+  createComment(input: $input, condition: $condition) {
     id
     name
-    description
-    city
+    comment
     createdAt
     updatedAt
   }
 }
-mutation UpdateRestaurant(
-  $input: UpdateRestaurantInput!
-  $condition: ModelRestaurantConditionInput
+mutation UpdateComment(
+  $input: UpdateCommentInput!
+  $condition: ModelCommentConditionInput
 ) {
-  updateRestaurant(input: $input, condition: $condition) {
+  updateComment(input: $input, condition: $condition) {
     id
     name
-    description
-    city
+    comment
     createdAt
     updatedAt
   }
 }
-mutation DeleteRestaurant(
-  $input: DeleteRestaurantInput!
-  $condition: ModelRestaurantConditionInput
+mutation DeleteComment(
+  $input: DeleteCommentInput!
+  $condition: ModelCommentConditionInput
 ) {
-  deleteRestaurant(input: $input, condition: $condition) {
+  deleteComment(input: $input, condition: $condition) {
     id
     name
-    description
-    city
+    comment
     createdAt
     updatedAt
   }

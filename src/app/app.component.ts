@@ -3,7 +3,7 @@ import { Component, HostBinding, OnInit, OnDestroy } from '@angular/core';
 import { FormControl, FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { AppServiceService } from './app-service.service';
 import { ViewEncapsulation } from '@angular/core';
-import { APIService, Restaurant } from "./API.service";
+import { APIService, Comment } from "./API.service";
 import { Subscription } from 'rxjs';
 
 @Component({
@@ -27,27 +27,26 @@ export class AppComponent implements OnInit, OnDestroy {
   homeText = '';
 
   public createForm: FormGroup;
-  public restaurants: Array<Restaurant> = [];
+  public comments: Array<Comment> = [];
 
   constructor(private api: APIService, private fb: FormBuilder, 
     private http: HttpClient, private service: AppServiceService) {
 
     this.createForm = this.fb.group({
       name: ["", Validators.required],
-      description: ["", Validators.required],
-      city: [""]
+      comment: ["", Validators.required]
     });
   }
 
-  public onCreate(restaurant: Restaurant) {
+  public onCreate(comment: Comment) {
     this.api
-      .CreateRestaurant(restaurant)
+      .CreateComment(comment)
       .then((event) => {
         console.log("item created!");
         this.createForm.reset();
       })
       .catch((e) => {
-        console.log("error creating restaurant...", e);
+        console.log("error creating comment...", e);
       });
   }
 
@@ -89,16 +88,16 @@ export class AppComponent implements OnInit, OnDestroy {
       }
     });
 
-      /* fetch restaurants when app loads */
-      this.api.ListRestaurants().then((event) => {
-          this.restaurants = event.items as Restaurant[];
+      /* fetch Comments when app loads */
+      this.api.ListComments().then((event) => {
+          this.comments = event.items as Comment[];
       });
 
-      /* subscribe to new restaurants being created */
+      /* subscribe to new Comments being created */
       this.subscription = <Subscription>(
-         this.api.OnCreateRestaurantListener.subscribe((event: any) => {
-             const newRestaurant = event.value.data.onCreateRestaurant;
-             this.restaurants = [newRestaurant, ...this.restaurants];
+         this.api.OnCreateCommentListener.subscribe((event: any) => {
+             const newComment = event.value.data.onCreateComment;
+             this.comments = [newComment, ...this.comments];
          })
       );
   }
