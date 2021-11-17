@@ -54,7 +54,7 @@ $angular-dark-theme: mat.define-dark-theme(
     height: 70px;
     z-index: 100; 
     position: fixed;
-    background-color: #F0F8FF;
+    background-color: #87cefa;
     max-width: 100%;
 }
 
@@ -62,7 +62,7 @@ $angular-dark-theme: mat.define-dark-theme(
     height: 1800px;
     max-width: 100%;
     overflow: hidden;
-    background-color: #F0FFF0;
+    background-color: white;
     border-radius: 0;
 }
 
@@ -135,7 +135,7 @@ svg.material-icons:not(:last-child) {
   transition: all 0.2s ease-in-out;
   line-height: 24px;
   box-shadow: 0 4px 8px 0 rgba(114, 108, 117, 0.562);
-  background-color: #FFFFF0;
+  background-color: #fefefa
 }
 
 .card-container .card:not(:last-child) {

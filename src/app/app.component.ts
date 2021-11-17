@@ -2,7 +2,6 @@ import { HttpClient } from '@angular/common/http';
 import { Component, HostBinding, OnInit, OnDestroy } from '@angular/core';
 import { FormControl, FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { AppServiceService } from './app-service.service';
-import { ViewEncapsulation } from '@angular/core';
 import { APIService, Comment } from "./API.service";
 import { Subscription } from 'rxjs';
 
@@ -10,8 +9,7 @@ import { Subscription } from 'rxjs';
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
-  providers: [],
-  encapsulation: ViewEncapsulation.None
+  providers: []
 })
 export class AppComponent implements OnInit, OnDestroy {
   title = 'James Gabbitus Portfolio';
@@ -81,7 +79,7 @@ export class AppComponent implements OnInit, OnDestroy {
         this.lineColor = 'black';
         this.toolbarShadow = '';
         this.buttonBorders = '1px solid #EEE8AA';
-        this.buttonBack = '#FFFFF0';
+        this.buttonBack = '#f4f0ec';
         this.routerBorder = '';
         this.routerShadow = '';
       }
