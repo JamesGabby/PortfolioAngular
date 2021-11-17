@@ -115,7 +115,7 @@ svg.material-icons:not(:last-child) {
 
 .card-container {
   display: flex;
-  //flex-wrap: wrap;
+  flex-wrap: wrap;
   justify-content: center;
   margin-top: 0;
 }
@@ -210,6 +210,11 @@ a:hover {
   font-size: 22px;
 }
 
+#linkedin-logo,
+  #github-logo {
+    display: none;
+  }
+
 @media only screen and (max-width: 500px) {
   #myName {
     margin-left: 10px;
@@ -226,15 +231,6 @@ a:hover {
     width: 400px;
   }
 
-  .toolbar #twitter-logo {
-    transform: scale(0.7);
-
-  }
-
-  .toolbar #youtube-logo {
-    transform: scale(0.7);
-  }
-
   .comment-full-width {
     width: 50%;
     margin-left: 1.5%;
@@ -249,6 +245,34 @@ a:hover {
 
   .comment-form button {
     margin-left: 42%;
+  }
+
+  #home {
+    margin-top: 7px;
+    margin-left: -12px;
+    transform: scale(0.8);
+  }
+
+  #linkedin-logo,
+  #github-logo {
+    display:flex;
+  }
+
+  .toolbar #twitter-logo,
+  .toolbar #youtube-logo {
+    display: none;
+  }
+
+  .card {
+    margin-top: auto;
+  }
+
+  #card-spacer {
+    margin-top: 80px;
+  }
+
+  #auth {
+    margin-top: 70px;
   }
 }
 
