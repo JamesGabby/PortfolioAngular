@@ -74,11 +74,13 @@ $angular-dark-theme: mat.define-dark-theme(
 .toolbar #twitter-logo {
     margin: 0 8px;
     margin-top: 23%;
+    box-shadow: 18px 4px 45px 0 rgba(249, 246, 250, 0.562);
 }
 
 .toolbar #youtube-logo {
     margin: 0 16px;
     margin-top: 17%;
+
 }
 
 #home {
