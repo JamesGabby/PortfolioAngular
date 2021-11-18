@@ -54,8 +54,9 @@ $angular-dark-theme: mat.define-dark-theme(
     height: 70px;
     z-index: 100; 
     position: fixed;
-    background-color: #87cefa;
+    background-color: #05386B;
     max-width: 100%;
+    color: grey;
 }
 
 .main-card {
@@ -85,10 +86,25 @@ $angular-dark-theme: mat.define-dark-theme(
   margin-right: 4px;
 }
 
-.toolbar #twitter-logo:hover,
-.toolbar #youtube-logo:hover,
+.toolbar path:hover,
 .toolbar #home:hover {
-    opacity: 0.6;
+    fill: white;
+    -webkit-transition: all 500ms ease-in-out;
+    -moz-transition: all 500ms ease-in-out;
+    -ms-transition: all 500ms ease-in-out;
+    -o-transition: all 500ms ease-in-out;
+    transition: all 500ms ease-in-out;
+    color: white;
+}
+
+.toolbar #youtube-logo {
+  transform: scale(1.3);
+  margin-bottom: 1px;
+}
+
+.toolbar #twitter-logo {
+  transform: scale(1.2);
+  margin-bottom: 1px;
 }
 
 .line {
@@ -179,7 +195,7 @@ a:hover {
 .comment-form button {
   margin: 0;
   position: relative;
-  margin-left: 720px;
+  margin-left: 705px;
 
 }
 
@@ -191,7 +207,7 @@ a:hover {
 
 .name-label {
   width: 40%;
-  margin-left: 665px;
+  margin-left: 510px;
 }
 
 .comments-list {
@@ -255,7 +271,7 @@ a:hover {
 
   #linkedin-logo,
   #github-logo {
-    display:flex;
+    display: flex;
   }
 
   .toolbar #twitter-logo,
