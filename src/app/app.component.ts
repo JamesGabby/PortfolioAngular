@@ -18,9 +18,9 @@ export class AppComponent implements OnInit, OnDestroy {
   lineColor = 'black';
   toolbarShadow = '';
   routerShadow = '';
-  buttonBorders = '1px solid #EEE8AA';
+  buttonBorders = '1px solid grey';
   buttonBack = '';
-  routerBorder = '1px solid #EEE8AA';
+  routerBorder = '1px solid grey';
   homeText = '';
 
   public createForm: FormGroup;
@@ -78,8 +78,8 @@ export class AppComponent implements OnInit, OnDestroy {
         this.svgColor = 'black'
         this.lineColor = 'black';
         this.toolbarShadow = '';
-        this.buttonBorders = '1px solid #EEE8AA';
-        this.buttonBack = '#f4f0ec';
+        this.buttonBorders = '1px solid grey';
+        this.buttonBack = '';
         this.routerBorder = '';
         this.routerShadow = '';
       }

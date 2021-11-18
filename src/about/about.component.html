@@ -72,11 +72,34 @@
                 <mat-panel-description>This portfolio was built using the Angular framework and AWS Amplify</mat-panel-description>
             </mat-list-item>
           </mat-list>
-      </mat-expansion-panel>
-
-
-      
+      </mat-expansion-panel>  
     </mat-accordion>
+    </mat-expansion-panel>
+
+    <mat-expansion-panel>
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          Interests
+        </mat-panel-title>
+      </mat-expansion-panel-header>
+      <mat-panel-description id="exc">
+        {{interests}}
+      </mat-panel-description>
+    </mat-expansion-panel>
+
+    <mat-expansion-panel>
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          Contact Details
+        </mat-panel-title>
+      </mat-expansion-panel-header>
+      <mat-panel-description id="exc">
+        {{sent}}
+        <br><br>
+        {{email}}
+        <br>
+        {{number}}
+      </mat-panel-description>
     </mat-expansion-panel>
   </mat-accordion>
 </mat-card>
