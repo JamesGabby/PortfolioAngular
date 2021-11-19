@@ -24,7 +24,7 @@ mat-icon {
 }
 
 mat-list-item {
-  margin-top: -20px;
+  margin-top: 0;
 }
 
 .list {
@@ -46,6 +46,10 @@ mat-expansion-panel {
 @media only screen and (max-width: 500px) {
   mat-list-item + #longlist {
     margin-top: 65px;
+  }
+
+  mat-list-item + #phil-list {
+    margin-top: 25px;
   }
 }
 

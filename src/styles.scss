@@ -195,7 +195,6 @@ a:hover {
   margin: 0;
   position: relative;
   margin-left: 705px;
-
 }
 
 .comment-full-width {
@@ -223,7 +222,7 @@ a:hover {
 #linkedin-logo,
   #github-logo {
     display: none;
-  }
+}
 
 @media only screen and (max-width: 500px) {
   #myName {
@@ -283,6 +282,10 @@ a:hover {
 
   #auth {
     margin-top: 70px;
+  }
+
+  #comments-text {
+    margin-top: 25px;
   }
 }
 

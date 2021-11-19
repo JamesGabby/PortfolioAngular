@@ -58,7 +58,7 @@
   <h1 [style.display]="homeText" style="text-align: center; margin-top: 20px;">Welcome! <br>Feel free to browse my portfolio with the navigation above<br>
   </h1>
   <div id="auth" [style.display]="homeText">
-    <amplify-authenticator>
+    <amplify-authenticator style="display: none;">
       <div>
         Portfolio
         <amplify-sign-out></amplify-sign-out>
@@ -111,7 +111,7 @@
   </form>
 </div>
 <div style="margin-top: 3%;"></div>
-<h2 style="text-align: center; position: relative; margin-bottom: 2%;"><u>_Comments_</u></h2>
+<h2 style="text-align: center; position: relative; margin-bottom: 2%;" id="comments-text"><u>_Comments_</u></h2>
 <div *ngFor="let comment of comments" class="comments-list">
   <h3><b>{{ comment.name }}</b>: {{ comment.comment }}</h3>
 </div>
