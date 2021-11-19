@@ -93,13 +93,7 @@ $angular-dark-theme: mat.define-dark-theme(
 
 .toolbar path:hover,
 .toolbar #home:hover {
-    fill: white;
-    -webkit-transition: all 500ms ease-in-out;
-    -moz-transition: all 500ms ease-in-out;
-    -ms-transition: all 500ms ease-in-out;
-    -o-transition: all 500ms ease-in-out;
-    transition: all 500ms ease-in-out;
-    color: white;
+    opacity: 0.7;
 }
 
 .toolbar #youtube-logo {
