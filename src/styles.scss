@@ -56,7 +56,7 @@ $angular-dark-theme: mat.define-dark-theme(
     position: fixed;
     background-color: #05386B;
     max-width: 100%;
-    color: grey;
+    color: white;
     -webkit-transition: all 500ms ease-in-out;
     -moz-transition: all 500ms ease-in-out;
     -ms-transition: all 500ms ease-in-out;
@@ -113,7 +113,7 @@ $angular-dark-theme: mat.define-dark-theme(
 }
 
 .line {
-    border-right: 2px solid black;
+    border-right: 2px solid ;
     height: 36px;
     border-radius: 100%;
     opacity: 0.8;

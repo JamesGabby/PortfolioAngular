@@ -13,9 +13,10 @@ import { Subscription } from 'rxjs';
 })
 export class AppComponent implements OnInit, OnDestroy {
   title = 'James Gabbitus Portfolio';
-  svgColor = 'black';
+  svgColor = 'white';
+  svgColorB = 'black';
   toggleControl = new FormControl(false);
-  lineColor = 'black';
+  lineColor = 'white';
   toolbarShadow = '';
   routerShadow = '';
   buttonBorders = '1px solid grey';
@@ -67,6 +68,8 @@ export class AppComponent implements OnInit, OnDestroy {
       if (this.className = darkMode) {
         this.className = darkClassName;
         this.svgColor = 'white';
+        this.svgColorB = 'white';
+
         this.lineColor = 'white';
         this.toolbarShadow = '0 4px 8px 0 red';
         this.buttonBorders = '1px solid red';
@@ -75,8 +78,10 @@ export class AppComponent implements OnInit, OnDestroy {
         this.routerShadow = '0 4px 19px 0 red';
       } else {
         this.className = '';
-        this.svgColor = 'black'
-        this.lineColor = 'black';
+        this.svgColor = 'white'
+        this.svgColorB = 'black';
+
+        this.lineColor = 'white';
         this.toolbarShadow = '';
         this.buttonBorders = '1px solid grey';
         this.buttonBack = '';
